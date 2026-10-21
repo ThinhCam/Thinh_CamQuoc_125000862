@@ -7,10 +7,6 @@
   <meta name="theme-color" content="#0b1020">
   <title>Cam Quốc Thịnh | Portfolio</title>
 
-  <!-- Animate.css: hiệu ứng khi tải trang -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <!-- AOS: hiệu ứng khi cuộn trang -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,9 +15,10 @@
   <header class="site-header">
     <nav class="nav container" aria-label="Điều hướng chính">
       <a class="brand" href="#home" aria-label="Cam Quốc Thịnh - Trang chủ">CQT<span>.</span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Mở menu">
+      <input class="menu-checkbox" type="checkbox" id="menu-checkbox" aria-label="Mở hoặc đóng menu">
+      <label class="menu-toggle" for="menu-checkbox" aria-hidden="true">
         <span></span><span></span><span></span>
-      </button>
+      </label>
       <ul class="nav-links" id="nav-links">
         <li><a href="#about">Giới thiệu</a></li>
         <li><a href="#skills">Kỹ năng</a></li>
@@ -34,8 +31,8 @@
   <main id="main-content">
     <section class="hero section container" id="home">
       <div class="hero-copy">
-        <p class="eyebrow animate__animated animate__fadeInUp">XIN CHÀO, MÌNH LÀ</p>
-        <h1 class="animate__animated animate__fadeInUp animate__delay-1s">Cam Quốc <span>Thịnh</span></h1>
+        <p class="eyebrow entrance-up">XIN CHÀO, MÌNH LÀ</p>
+        <h1 class="entrance-up delay-1">Cam Quốc <span>Thịnh</span></h1>
         <h2 class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">Sinh viên Công nghệ thông tin <span aria-hidden="true">·</span> Lập trình viên tương lai</h2>
         <p class="hero-description animate__animated animate__fadeInUp animate__delay-2s">
           Mình yêu thích lập trình, thiết kế website và xây dựng những sản phẩm số đơn giản,
@@ -50,7 +47,7 @@
           <span>Biên Hòa, Đồng Nai</span>
         </div>
       </div>
-      <aside class="hero-card animate__animated animate__fadeInRight animate__delay-1s" aria-label="Thẻ giới thiệu">
+      <aside class="hero-card entrance-right delay-1" aria-label="Thẻ giới thiệu">
         <div class="avatar" aria-hidden="true">T</div>
         <p class="card-label">MY FOCUS</p>
         <h3>Build. Learn. Improve.</h3>
@@ -61,18 +58,18 @@
     </section>
 
     <section class="section container" id="about" aria-labelledby="about-title">
-      <div class="section-heading" data-aos="fade-up">
+      <div class="section-heading">
         <p class="eyebrow">01 / VỀ MÌNH</p>
         <h2 id="about-title">Một chút về <span>mình</span></h2>
         <p>Mình đang xây dựng nền tảng vững chắc về lập trình và thiết kế giao diện.</p>
       </div>
       <div class="about-grid">
-        <article class="about-panel panel" data-aos="fade-up">
+        <article class="about-panel panel">
           <h3>Hành trình của mình</h3>
           <p>Mình là Cam Quốc Thịnh, sinh viên ngành Công nghệ thông tin tại Đại học Lạc Hồng. Mình quan tâm đến cách một website được thiết kế, xây dựng và tối ưu để mang lại trải nghiệm tốt cho người dùng.</p>
           <p>Trong quá trình học, mình thực hành qua các bài tập HTML, CSS, Python và SQL. Mình muốn tiếp tục nâng cao kỹ năng bằng những dự án nhỏ, có thể sử dụng và cải thiện qua từng phiên bản.</p>
         </article>
-        <div class="stats-grid" data-aos="fade-up" data-aos-delay="100">
+        <div class="stats-grid">
           <article class="stat-card panel"><span class="stat-icon">⌘</span><strong>Web</strong><span>Thiết kế giao diện</span></article>
           <article class="stat-card panel"><span class="stat-icon">⌁</span><strong>Code</strong><span>Tư duy lập trình</span></article>
           <article class="stat-card panel"><span class="stat-icon">↗</span><strong>Learn</strong><span>Học hỏi liên tục</span></article>
@@ -82,43 +79,43 @@
     </section>
 
     <section class="section container" id="skills" aria-labelledby="skills-title">
-      <div class="section-heading" data-aos="fade-up">
+      <div class="section-heading">
         <p class="eyebrow">02 / KỸ NĂNG</p>
         <h2 id="skills-title">Công cụ mình <span>sử dụng</span></h2>
         <p>Các kỹ năng mình đang học và thực hành trong quá trình làm dự án.</p>
       </div>
       <div class="skills-grid">
-        <article class="skill-card panel" data-aos="fade-up">
+        <article class="skill-card panel">
           <div class="skill-top"><span class="skill-symbol orange">5</span><h3>HTML5</h3></div>
           <p>Xây dựng cấu trúc nội dung rõ ràng bằng các thẻ semantic.</p>
-          <div class="skill-track" role="progressbar" aria-label="Mức độ tự đánh giá HTML" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85"><span style="--level:85%"></span></div>
+          <div class="skill-track" role="img" aria-label="HTML: 85 phần trăm"><span style="--level:85%"></span></div>
           <small>Đang thực hành</small>
         </article>
-        <article class="skill-card panel" data-aos="fade-up" data-aos-delay="70">
+        <article class="skill-card panel">
           <div class="skill-top"><span class="skill-symbol blue">✳</span><h3>CSS3</h3></div>
           <p>Thiết kế bố cục với Flexbox, Grid, variables và responsive.</p>
-          <div class="skill-track" role="progressbar" aria-label="Mức độ tự đánh giá CSS" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"><span style="--level:80%"></span></div>
+          <div class="skill-track" role="img" aria-label="CSS: 80 phần trăm"><span style="--level:80%"></span></div>
           <small>Đang thực hành</small>
         </article>
-        <article class="skill-card panel" data-aos="fade-up" data-aos-delay="140">
-          <div class="skill-top"><span class="skill-symbol yellow">JS</span><h3>JavaScript</h3></div>
-          <p>Bổ sung tương tác và xử lý hành vi cho trang web.</p>
-          <div class="skill-track" role="progressbar" aria-label="Mức độ tự đánh giá JavaScript" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55"><span style="--level:55%"></span></div>
-          <small>Đang học</small>
+        <article class="skill-card panel">
+          <div class="skill-top"><span class="skill-symbol yellow">CSS</span><h3>Responsive Design</h3></div>
+          <p>Thiết kế giao diện thích ứng nhiều kích thước màn hình chỉ với HTML và CSS.</p>
+          <div class="skill-track" role="img" aria-label="Responsive Design: 75 phần trăm"><span style="--level:75%"></span></div>
+          <small>Đang thực hành</small>
         </article>
-        <article class="skill-card panel" data-aos="fade-up" data-aos-delay="210">
+        <article class="skill-card panel">
           <div class="skill-top"><span class="skill-symbol green">Py</span><h3>Python</h3></div>
           <p>Luyện tư duy giải quyết bài toán và cấu trúc dữ liệu.</p>
           <div class="skill-track" role="progressbar" aria-label="Mức độ tự đánh giá Python" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65"><span style="--level:65%"></span></div>
           <small>Đang thực hành</small>
         </article>
-        <article class="skill-card panel" data-aos="fade-up" data-aos-delay="280">
+        <article class="skill-card panel">
           <div class="skill-top"><span class="skill-symbol purple">DB</span><h3>SQL</h3></div>
           <p>Tạo bảng, truy vấn và tổ chức dữ liệu cơ bản.</p>
           <div class="skill-track" role="progressbar" aria-label="Mức độ tự đánh giá SQL" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"><span style="--level:60%"></span></div>
           <small>Đang học</small>
         </article>
-        <article class="skill-card panel" data-aos="fade-up" data-aos-delay="350">
+        <article class="skill-card panel">
           <div class="skill-top"><span class="skill-symbol pink">Git</span><h3>Git & GitHub</h3></div>
           <p>Quản lý phiên bản và triển khai website bằng GitHub Pages.</p>
           <div class="skill-track" role="progressbar" aria-label="Mức độ tự đánh giá Git và GitHub" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"><span style="--level:60%"></span></div>
@@ -129,25 +126,25 @@
     </section>
 
     <section class="section container" id="projects" aria-labelledby="projects-title">
-      <div class="section-heading" data-aos="fade-up">
+      <div class="section-heading">
         <p class="eyebrow">03 / DỰ ÁN</p>
         <h2>Một số dự án <span>tiêu biểu</span></h2>
         <p>Những ý tưởng và bài tập mình đã hoặc đang phát triển trong quá trình học.</p>
       </div>
       <div class="projects-grid">
-        <article class="project-card panel" data-aos="fade-up">
+        <article class="project-card panel">
           <div class="project-art art-blue"><span class="art-window"><i></i><i></i><i></i><b>DormHelper</b><small>Find a place to feel at home.</small></span></div>
           <div class="project-body"><div class="project-meta"><span>01 / UX & WEB</span><span class="project-arrow" aria-hidden="true">↗</span></div><h3>DormHelper</h3><p>Ý tưởng ứng dụng hỗ trợ sinh viên tìm phòng trọ, theo dõi chi phí và thông tin thuê phòng.</p><div class="tags"><span>UI/UX</span><span>Figma</span><span>Prototype</span></div></div>
         </article>
-        <article class="project-card panel" data-aos="fade-up" data-aos-delay="100">
+        <article class="project-card panel">
           <div class="project-art art-purple"><span class="finance-art"><b>OVERVIEW</b><strong>₫ 2.450.000</strong><small>Monthly expenses</small><span class="fake-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></span></div>
-          <div class="project-body"><div class="project-meta"><span>02 / WEB APP</span><span class="project-arrow" aria-hidden="true">↗</span></div><h3>Finance App</h3><p>Giao diện quản lý thu chi với các chức năng thêm khoản chi, đặt ngân sách và xem thống kê.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+          <div class="project-body"><div class="project-meta"><span>02 / WEB APP</span><span class="project-arrow" aria-hidden="true">↗</span></div><h3>Finance App</h3><p>Giao diện quản lý thu chi với các chức năng thêm khoản chi, đặt ngân sách và xem thống kê.</p><div class="tags"><span>HTML</span><span>CSS</span><span>UI Design</span></div></div>
         </article>
-        <article class="project-card panel" data-aos="fade-up" data-aos-delay="200">
+        <article class="project-card panel">
           <div class="project-art art-green"><span class="code-art"><b>BankAccount.py</b><span>class <em>BankAccount</em>:</span><span>&nbsp;&nbsp;def deposit(self):</span><span>&nbsp;&nbsp;&nbsp;&nbsp;return balance</span><span class="code-cursor">▋</span></span></div>
           <div class="project-body"><div class="project-meta"><span>03 / PYTHON</span><span class="project-arrow" aria-hidden="true">↗</span></div><h3>Quản lý tài khoản ngân hàng</h3><p>Bài tập Python thực hành quản lý dữ liệu, tìm kiếm, sắp xếp và đọc ghi tệp.</p><div class="tags"><span>Python</span><span>OOP cơ bản</span><span>File</span></div></div>
         </article>
-        <article class="project-card panel" data-aos="fade-up" data-aos-delay="300">
+        <article class="project-card panel">
           <div class="project-art art-orange"><span class="shop-art"><span class="shop-bag">▱</span><b>2ND STORE</b><small>Tech finds a second life.</small></span></div>
           <div class="project-body"><div class="project-meta"><span>04 / E-COMMERCE</span><span class="project-arrow" aria-hidden="true">↗</span></div><h3>Website bán đồ công nghệ 2nd</h3><p>Website giới thiệu và kinh doanh thiết bị công nghệ đã qua sử dụng, tập trung vào trải nghiệm mua sắm.</p><div class="tags"><span>WordPress</span><span>SEO</span><span>Web Design</span></div></div>
         </article>
@@ -155,7 +152,7 @@
     </section>
 
     <section class="contact-section section container" id="contact" aria-labelledby="contact-title">
-      <div class="contact-panel" data-aos="zoom-in">
+      <div class="contact-panel">
         <div>
           <p class="eyebrow">04 / KẾT NỐI</p>
           <h2 id="contact-title">Cùng tạo nên điều <span>thú vị</span> nhé!</h2>
@@ -171,12 +168,9 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner"><a class="brand" href="#home">CQT<span>.</span></a><p>Được xây dựng bằng HTML, CSS và JavaScript.</p><a href="#home">Về đầu trang ↑</a></div>
-    <p class="copyright">© <span id="current-year">2026</span> Cam Quốc Thịnh. Made with care.</p>
+    <div class="container footer-inner"><a class="brand" href="#home">CQT<span>.</span></a><p>Được xây dựng hoàn toàn bằng HTML và CSS.</p><a href="#home">Về đầu trang ↑</a></div>
+    <p class="copyright">© 2026 Cam Quốc Thịnh. Made with care.</p>
   </footer>
 
-  <!-- AOS script đặt trước lệnh khởi tạo trong script.js -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>

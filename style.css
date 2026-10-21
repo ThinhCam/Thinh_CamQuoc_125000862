@@ -165,3 +165,57 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+
+/* Hiệu ứng và menu chỉ dùng CSS, không cần JavaScript */
+.menu-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.menu-toggle { cursor: pointer; }
+.menu-checkbox:focus-visible + .menu-toggle {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 4px;
+}
+.menu-checkbox:checked + .menu-toggle span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.menu-checkbox:checked + .menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+.menu-checkbox:checked + .menu-toggle span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+.entrance-up { animation: entranceUp .7s ease both; }
+.entrance-right { animation: entranceRight .8s ease both; }
+.delay-1 { animation-delay: .18s; }
+.delay-2 { animation-delay: .36s; }
+@keyframes entranceUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes entranceRight {
+  from { opacity: 0; transform: translateX(22px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.skill-track span {
+  transform-origin: left;
+  animation: fillSkill 1.2s ease .2s both;
+}
+@keyframes fillSkill {
+  from { width: 0; }
+  to { width: var(--level); }
+}
+@media (max-width: 600px) {
+  .menu-checkbox:checked ~ .nav-links { display: flex; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .entrance-up, .entrance-right, .skill-track span { animation: none; }
+}
