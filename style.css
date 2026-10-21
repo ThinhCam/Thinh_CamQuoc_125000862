@@ -219,3 +219,59 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @media (prefers-reduced-motion: reduce) {
   .entrance-up, .entrance-right, .skill-track span { animation: none; }
 }
+/* Hiệu ứng xuất hiện khi tải trang */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-up {
+    animation: fadeInUp 0.8s ease-out both;
+}
+
+/* Hiệu ứng lần lượt cho các thẻ */
+.skill-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.skill-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.skill-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.skill-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* Hiệu ứng khi rê chuột */
+.skill-card,
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover,
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Tôn trọng cài đặt giảm chuyển động */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
